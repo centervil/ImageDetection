@@ -24,7 +24,8 @@ vector<wstring> CUtil::get_file_path_in_dir(const wstring & dir_name, const wstr
 	hFind = FindFirstFile(search_name.c_str(), &win32fd);
 
 	if (hFind == INVALID_HANDLE_VALUE) {
-		throw runtime_error("file not found");
+		//throw runtime_error("file not found");
+		return file_names;
 	}
 
 	do {
