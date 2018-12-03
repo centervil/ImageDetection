@@ -9,10 +9,12 @@ CImageManager::CImageManager()
 CImageManager::CImageManager(wstring path)
 {
 	vImage_.clear();
+	LoadImages(path, L"gif");
 	LoadImages(path, L"jpg");
 	LoadImages(path, L"jpeg");
 	LoadImages(path, L"png");
 	LoadImages(path, L"bmp");
+	LoadImages(path, L"tif");
 	LoadImages(path, L"tiff");
 }
 
