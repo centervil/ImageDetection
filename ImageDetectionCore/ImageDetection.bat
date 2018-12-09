@@ -1,20 +1,20 @@
-ï»¿@echo off
+@echo off
 cd /d %~dp0
 setlocal enabledelayedexpansion
 
-rem æ¤œæŸ»ç”»åƒï¼ˆå„æ–‡è¨€ã®å‰å¾Œã«æ¤œå‡ºè¨˜å·ã‚ã‚Šï¼‰
+rem ŒŸ¸‰æ‘œiŠe•¶Œ¾‚Ì‘OŒã‚ÉŒŸo‹L†‚ ‚èj
 set SOURCE_PATH=Source
 
-rem æ­£è§£æƒ…å ±ç”»åƒï¼ˆå„æ–‡è¨€ã®ç®‡æ‰€ã«æ¤œå‡ºè¨˜å·Ã—2ï¼‰
+rem ³‰ðî•ñ‰æ‘œiŠe•¶Œ¾‚Ì‰ÓŠ‚ÉŒŸo‹L†~2j
 set REF_PATH=Ref
 
-rem ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”»åƒï¼ˆæ¤œå‡ºè¨˜å·ï¼‰
+rem ƒeƒ“ƒvƒŒ[ƒg‰æ‘œiŒŸo‹L†j
 set TEMPLATE_PATH=Template
 
-rem æ¤œæŸ»ç”»åƒã®è§£æžçµæžœ
+rem ŒŸ¸‰æ‘œ‚Ì‰ðÍŒ‹‰Ê
 set RESULT_PATH=Result
 
 call Release\ImageDetectionCore.exe %REF_PATH% %TEMPLATE_PATH% %RESULT_PATH% -> result_ref.txt
 call Release\ImageDetectionCore.exe %SOURCE_PATH% %TEMPLATE_PATH% %RESULT_PATH% -w -s -> result.txt
-
+pause
 exit /b 0
